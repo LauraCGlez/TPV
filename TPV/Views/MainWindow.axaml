@@ -1,0 +1,272 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:TPV.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="1200" d:DesignHeight="800"
+        Width="1200" Height="800"
+        x:Class="TPV.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Background="Khaki"
+        Title="TPV">
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+    
+    
+    <Grid RowDefinitions="Auto, Auto, *, Auto">
+        
+        <!--Menu de navegacion-->
+        <Grid Grid.Row="0" Background="Gray" Height="40" ColumnDefinitions="Auto, *, Auto, Auto">
+            <Button Width="50">
+                <Image Source="{SvgImage /Assets/svg/pregunta.svg}"></Image>
+            </Button>
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1">
+                <Label FontWeight="Black">TPV House Burger</Label>
+            </StackPanel>
+            <Button Grid.Column="2" Width="50" Background="Green">
+                <Image Source="{SvgImage /Assets/svg/back.svg}"></Image>
+            </Button>
+            <Button Grid.Column="3" Width="50" Background="Red">
+                <Image Source="{SvgImage /Assets/svg/close.svg}"></Image>
+            </Button>
+        </Grid>
+        
+        <!--Productos-->
+        <Grid Grid.Row="1" Background="Coral" ColumnDefinitions="Auto, Auto, Auto, Auto" Margin="8 8" >
+            
+            <StackPanel Grid.Column="0">
+                <TextBlock FontSize="20" FontFamily="Comic Sans MS" Text="Hamburguesas" HorizontalAlignment="Center" VerticalAlignment="Top"></TextBlock>
+               
+                <!--Hamburguesas-->
+                <UniformGrid Grid.Column="0" Columns="3" Rows="3" HorizontalAlignment="Center" Background="Pink" Margin="2 2 0 2 ">
+                    <Button BorderBrush="Black" BorderThickness="1" Margin="25">
+                        <Image Source="{SvgImage /Assets/svg/b1.svg}" Width="50" Height="50"/>
+                    </Button>
+                    <Button BorderBrush="Black" BorderThickness="1" Margin="25">
+                        <Image Source="{SvgImage /Assets/svg/b2.svg}" Width="50" Height="50"/>
+                    </Button>
+                    <Button BorderBrush="Black" BorderThickness="1" Margin="25">
+                        <Image Source="{SvgImage /Assets/svg/b3.svg}" Width="50" Height="50"/>
+                    </Button>
+                    <Button BorderBrush="Black" BorderThickness="1" Margin="25">
+                        <Image Source="{SvgImage /Assets/svg/b4.svg}" Width="50" Height="50"/>
+                    </Button>
+                    <Button BorderBrush="Black" BorderThickness="1" Margin="25">
+                        <Image Source="{SvgImage /Assets/svg/b5.svg}" Width="50" Height="50"/>
+                    </Button>
+                    <Button BorderBrush="Black" BorderThickness="1" Margin="25">
+                        <Image Source="{SvgImage /Assets/svg/b6.svg}" Width="50" Height="50"/>
+                    </Button>
+                    <Button BorderBrush="Black" BorderThickness="1" Margin="25">
+                        <Image Source="{SvgImage /Assets/svg/b7.svg}" Width="50" Height="50"/>
+                    </Button>
+                    <Button BorderBrush="Black" BorderThickness="1" Margin="25">
+                        <Image Source="{SvgImage /Assets/svg/b8.svg}" Width="50" Height="50"/>
+                    </Button>
+                    <Button BorderBrush="Black" BorderThickness="1" Margin="25">
+                        <Image Source="{SvgImage /Assets/svg/b9.svg}" Width="50" Height="50"/>
+                    </Button>
+                </UniformGrid>
+            </StackPanel>
+            
+            <StackPanel Grid.Column="1">
+                <TextBlock FontSize="20" FontFamily="Comic Sans MS" Text="Bebidas" HorizontalAlignment="Center" VerticalAlignment="Top"></TextBlock>
+                
+                <!--Bebidas-->
+                <UniformGrid Grid.Column="1" Columns="3" Rows="3" Background="Pink" HorizontalAlignment="Center" Margin="0 2 0 2">
+                    <Button BorderBrush="Black" BorderThickness="1" Margin="25">
+                        <Image Source="{SvgImage /Assets/svg/d1.svg}" Width="50" Height="50"/>
+                    </Button>
+                    <Button BorderBrush="Black" BorderThickness="1" Margin="25">
+                        <Image Source="{SvgImage /Assets/svg/d2.svg}" Width="50" Height="50"/>
+                    </Button>
+                    <Button BorderBrush="Black" BorderThickness="1" Margin="25">
+                        <Image Source="{SvgImage /Assets/svg/d3.svg}" Width="50" Height="50"/>
+                    </Button>
+                    <Button BorderBrush="Black" BorderThickness="1" Margin="25">
+                        <Image Source="{SvgImage /Assets/svg/d4.svg}" Width="50" Height="50"/>
+                    </Button>
+                    <Button BorderBrush="Black" BorderThickness="1" Margin="25">
+                        <Image Source="{SvgImage /Assets/svg/d5.svg}" Width="50" Height="50"/>
+                    </Button>
+                    <Button BorderBrush="Black" BorderThickness="1" Margin="25">
+                        <Image Source="{SvgImage /Assets/svg/d6.svg}" Width="50" Height="50"/>
+                    </Button>
+                    <Button BorderBrush="Black" BorderThickness="1" Margin="25">
+                        <Image Source="{SvgImage /Assets/svg/d7.svg}" Width="50" Height="50"/>
+                    </Button>
+                    <Button BorderBrush="Black" BorderThickness="1" Margin="25">
+                        <Image Source="{SvgImage /Assets/svg/d8.svg}" Width="50" Height="50"/>
+                    </Button>
+                    <Button BorderBrush="Black" BorderThickness="1" Margin="25">
+                        <Image Source="{SvgImage /Assets/svg/d9.svg}" Width="50" Height="50"/>
+                    </Button>
+                </UniformGrid>
+            </StackPanel>
+            
+            <StackPanel Grid.Column="2">
+                <TextBlock FontSize="20" FontFamily="Comic Sans MS" Text="Postres" HorizontalAlignment="Center" VerticalAlignment="Top"></TextBlock>
+                <!--Postres-->
+                <UniformGrid Grid.Column="2" Columns="3" Rows="3" Background="Pink" HorizontalAlignment="Center" Margin="0 2 0 2">
+                   
+                    <Button BorderBrush="Black" BorderThickness="1" Margin="25">
+                        <Image Source="{SvgImage /Assets/svg/p1.svg}" Width="50" Height="50" />
+                    </Button>
+                    <Button BorderBrush="Black" BorderThickness="1" Margin="25">
+                        <Image Source="{SvgImage /Assets/svg/p2.svg}" Width="50" Height="50"/>
+                    </Button>
+                    <Button BorderBrush="Black" BorderThickness="1" Margin="25">
+                        <Image Source="{SvgImage /Assets/svg/p3.svg}" Width="50" Height="50"/>
+                    </Button>
+                    <Button BorderBrush="Black" BorderThickness="1" Margin="25">
+                        <Image Source="{SvgImage /Assets/svg/p4.svg}" Width="50" Height="50"/>
+                    </Button>
+                    <Button BorderBrush="Black" BorderThickness="1" Margin="25">
+                        <Image Source="{SvgImage /Assets/svg/p5.svg}" Width="50" Height="50"/>
+                    </Button>
+                    <Button BorderBrush="Black" BorderThickness="1" Margin="25">
+                        <Image Source="{SvgImage /Assets/svg/p6.svg}" Width="50" Height="50"/>
+                    </Button>
+                    <Button BorderBrush="Black" BorderThickness="1" Margin="25">
+                        <Image Source="{SvgImage /Assets/svg/p7.svg}" Width="50" Height="50"/>
+                    </Button>
+                    <Button BorderBrush="Black" BorderThickness="1" Margin="25">
+                        <Image Source="{SvgImage /Assets/svg/p8.svg}" Width="50" Height="50"/>
+                    </Button>
+                    <Button BorderBrush="Black" BorderThickness="1" Margin="25">
+                        <Image Source="{SvgImage /Assets/svg/p9.svg}" Width="50" Height="50"/>
+                    </Button>
+                </UniformGrid>
+            </StackPanel>
+            
+          
+            
+            <!--Empleado-->
+            <StackPanel Grid.Column="3" Background="Coral" HorizontalAlignment="Center" Margin="35 40 0 0">
+                <Image Source="{SvgImage /Assets/svg/avatar.svg}" Width="60" Height="60" Margin="0 0 0 0"></Image>
+                <Button FontFamily="Comic Sans MS" HorizontalAlignment="Center" Margin="0 0 0 10">Laura</Button>
+                
+                <Image Source="{SvgImage /Assets/svg/mesa.svg}" Width="60" Height="60" ></Image>
+                <Button FontFamily="Comic Sans MS" HorizontalAlignment="Center" Margin="0 0 0 10">Mesas</Button>
+                
+                <Image Source="{SvgImage /Assets/svg/menu.svg}" Width="60" Height="60" ></Image>
+                <Button FontFamily="Comic Sans MS" HorizontalAlignment="Center">Menú</Button>
+                
+            </StackPanel>
+            
+        </Grid>
+        
+        
+        <!--Calculadora-->
+        <Grid Grid.Row="2" Height="290" Background="White" ColumnDefinitions="Auto, *" HorizontalAlignment="Left" Margin="8">
+            
+            <StackPanel Grid.Column="0" Width="260">
+                <Border BorderBrush="Black" 
+                        BorderThickness="1 1 0 5"
+                        Margin="0 0 0 10">
+                    <TextBlock 
+                        Margin="0 6 0 10"
+                        Text="Cuentas"
+                        VerticalAlignment="Top" 
+                        HorizontalAlignment="Center"
+                        Foreground="Coral"
+                        FontSize="16"
+                        TextDecorations="Underline"
+                        FontFamily="Comic Sans MS">
+                    </TextBlock>
+                </Border>
+                <Grid >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock FontFamily="Comic Sans MS" Foreground="Black" Grid.Column="0" Text="E" Margin="5"/>
+                    <TextBlock FontFamily="Comic Sans MS" Foreground="Black" Grid.Column="1" Text="C" Margin="5"/>
+                    <TextBlock FontFamily="Comic Sans MS" Foreground="Black" Grid.Column="2" Text="Ud" Margin="5"/>
+                    <TextBlock FontFamily="Comic Sans MS" Foreground="Black" Grid.Column="3" Text="Descripcion" Margin="5"/>
+                    <TextBlock FontFamily="Comic Sans MS" Foreground="Black" Grid.Column="4" Text="Precio" Margin="5"/>
+                    <TextBlock FontFamily="Comic Sans MS" Foreground="Black" Grid.Column="5" Text="Total" Margin="5"/>
+                </Grid>
+            </StackPanel>
+                
+            <StackPanel Grid.Column="1">
+                <Border BorderBrush="Black" 
+                        BorderThickness="2 2 2 1">
+                    
+                    <TextBlock  Text="=" VerticalAlignment="Center">
+                        <UniformGrid Columns="" Background="Pink" HorizontalAlignment="Center" Width="200" Height="243" Margin="0 44 0 0 ">
+                            <Button BorderBrush="Black" BorderThickness="1" Margin="0 0 0 0">
+                                <Image Source="{SvgImage /Assets/svg/1.svg}" Width="30" Height="40" />
+                            </Button>
+                            <Button BorderBrush="Black" BorderThickness="1" >
+                                <Image Source="{SvgImage /Assets/svg/2.svg}" Width="30" Height="40"/>
+                            </Button>
+                            <Button BorderBrush="Black" BorderThickness="1" >
+                                <Image Source="{SvgImage /Assets/svg/3.svg}" Width="30" Height="40"/>
+                            </Button>
+                            <Button BorderBrush="Black" BorderThickness="1" >
+                                <Image Source="{SvgImage /Assets/svg/4.svg}" Width="30" Height="40"/>
+                            </Button>
+                            <Button BorderBrush="Black" BorderThickness="1" >
+                                <Image Source="{SvgImage /Assets/svg/5.svg}" Width="30" Height="40"/>
+                            </Button>
+                            <Button BorderBrush="Black" BorderThickness="1" >
+                                <Image Source="{SvgImage /Assets/svg/6.svg}" Width="30" Height="40"/>
+                            </Button>
+                            <Button BorderBrush="Black" BorderThickness="1" >
+                                <Image Source="{SvgImage /Assets/svg/7.svg}" Width="30" Height="40"/>
+                            </Button>
+                            <Button BorderBrush="Black" BorderThickness="1" >
+                                <Image Source="{SvgImage /Assets/svg/8.svg}" Width="30" Height="40"/>
+                            </Button>
+                            <Button BorderBrush="Black" BorderThickness="1" >
+                                <Image Source="{SvgImage /Assets/svg/9.svg}" Width="30" Height="40"/>
+                            </Button>
+                            <Button BorderBrush="Black" BorderThickness="1">
+                                <Image Source="{SvgImage /Assets/svg/0.svg}" Width="30" Height="40"/>
+                            </Button>
+                            <Button BorderBrush="Black" BorderThickness="1" >
+                                <Image Source="{SvgImage /Assets/svg/mas.svg}" Width="30" Height="40"/>
+                            </Button>
+                            <Button BorderBrush="Black" BorderThickness="1">
+                                <Image Source="{SvgImage /Assets/svg/menos.svg}" Width="30" Height="40"/>
+                            </Button>
+                            <Button BorderBrush="Black" BorderThickness="1">
+                                <Image Source="{SvgImage /Assets/svg/coma.svg}" Width="30" Height="40"/>
+                            </Button>
+                            <Button BorderBrush="Black" BorderThickness="1" >
+                                <Image Source="{SvgImage /Assets/svg/flechaI.svg}" Width="30" Height="40"/>
+                            </Button>
+                            <Button BorderBrush="Black" BorderThickness="1">
+                                <Image Source="{SvgImage /Assets/svg/FechalB.svg}" Width="30" Height="40"/>
+                            </Button>
+                            <Button BorderBrush="Black" BorderThickness="1">
+                                <Image Source="{SvgImage /Assets/svg/FleachA.svg}" Width="30" Height="40"/>
+                            </Button>
+                        </UniformGrid>
+                    </TextBlock>
+                </Border>
+            </StackPanel>
+        </Grid>
+        
+        <!--Botones-->
+       <Grid Grid.Row="3" Margin="8" ColumnDefinitions="Auto, Auto, Auto, *, Auto, Auto" >
+           <Button FontFamily="Comic Sans MS" Background="Brown" Grid.Column="0" Margin="0,0,8,0">Eliminar</Button>
+           <Button FontFamily="Comic Sans MS" Background="Brown" Grid.Column="1" Margin="0,0,8,0">Cantidad</Button>
+           <Button FontFamily="Comic Sans MS" Background="Brown" Grid.Column="2" Margin="0,0,8,0">Imprimir</Button>
+           <Button FontFamily="Comic Sans MS" Background="Brown" Grid.Column="4" Margin="0,0,8,0">Efectivo</Button>
+           <Button FontFamily="Comic Sans MS" Background="Brown" Grid.Column="5" Margin="0,0,8,0">Tarjeta</Button>
+       </Grid>
+    </Grid>
+
+    
+</Window>

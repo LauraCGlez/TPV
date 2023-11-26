@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="SolucionPrueba/App.axaml" value="SolucionPrueba/SolucionPrueba.csproj" />
+        <entry key="SolucionPrueba/Views/MainWindow.axaml" value="SolucionPrueba/SolucionPrueba.csproj" />
+        <entry key="TPV/App.axaml" value="TPV/TPV.csproj" />
+        <entry key="TPV/Assets/IconStyles.axaml" value="TPV/TPV.csproj" />
+        <entry key="TPV/Views/MainWindow.axaml" value="TPV/TPV.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

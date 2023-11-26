@@ -1,0 +1,40 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:SolucionPrueba.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
+        x:Class="SolucionPrueba.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Terminal Punto de Venta">
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+    <Grid>
+        <!-- Encabezado -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10">
+            <TextBlock Text="TPV - Mi Negocio" FontSize="20" FontWeight="Bold" />
+        </StackPanel>
+
+        <!-- Contenido principal -->
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10">
+            <!-- Lista de productos y detalles de la compra -->
+            <ListBox Name="lstProductos" Width="400" Height="300" BorderBrush="Black" BorderThickness="1" />
+
+            <!-- Área de botones de acciones -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,10,0,0">
+                <Button Content="Agregar Producto" Width="120" Height="30" Margin="0,0,10,0"/>
+                <Button Content="Eliminar Producto" Width="120" Height="30" Margin="0,0,10,0"/>
+                <Button Content="Finalizar Compra" Width="120" Height="30"/>
+            </StackPanel>
+        </StackPanel>
+
+        <!-- Pie de página -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="10">
+            <TextBlock Text="{Binding Total}" FontSize="18" FontWeight="Bold"/>
+        </StackPanel>
+    </Grid>
+</Window>
